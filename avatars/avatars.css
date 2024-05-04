@@ -43,7 +43,7 @@ img {
   left: 37%;
 }
 
-
+/* flex를 지원하는 환경 */
 @supports (display: flex) {
   .face {
     position: relative;
