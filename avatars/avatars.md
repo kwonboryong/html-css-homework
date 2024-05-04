@@ -62,6 +62,7 @@ box1과 box2에 order을 부여해서 이미지 박스 채로 순서를 바꾸�
 이미지 하나하나에 다 order을 부여하기엔 너무 비효율적이고 주먹구구식이라 이미지 박스 채로 order을 줄 수 있는 방법을 생각해보다가 flex-flow가 생각났다. flex-flow를 column, nowrap으로 주면 박스를 2줄로 배치하면서 자식 요소인 box1, box2에 order을 부여할 수 있도록 부모 요소인 container에 display: flex를 줄 수 있다!
 
   - **2. aria-label의 순서** <br/>
+  ![aria-label의 순서 문제](images/flex 과제 접근성 문제.png)
 이미지와 상태 정보의 html 태그에는 float 과제의 이미지 순서대로 인덱싱을 붙인 aria-label 속성을 부여했다.<br/>
 그러나 flex 과제는 float 과제에서 이미지 순서를 바꾸는 과제였다.
 flex 과제에서 원래 float 과제에서 짜놓은 html 구조를 CSS 기능인 order 사용해서 순서만 바꾸었더니 html 구조 순서대로 인식되는 aria-label이 flex 과제의 이미지 순서가 아닌 기존의 float 과제의 이미지 순서대로 정렬되었다. 
@@ -69,6 +70,7 @@ flex 과제에서 원래 float 과제에서 짜놓은 html 구조를 CSS 기능�
 스크린 리더는 html 구조 순서에 따르니 html 태그 순서를 변경하는 방법 말고는 다른 해결 방법은 없는 것 같았다. <br/>
 혹시나 aria-label의 순서를 변경할 수 있는 방법이 있나 찾아보았지만 찾을 수 없었다. 그렇다고 aria-label 속성에 인덱싱을 제거하자니 너무 단조로워 프로필 이미지들이 구분되지 않을 것 같았다.<br/>
 결국 aria-label의 순서 문제는 해결하지 못했다.
+
 
  <br/> <br/>
 
