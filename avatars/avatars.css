@@ -1,0 +1,71 @@
+img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.offline {
+  background-color: #DBDBDB;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+}
+
+.online {
+  background-color: #4CFE88;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+}
+
+.face {
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+
+.box2 {
+  clear: both;
+  padding-top: 12px;
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+}
+
+
+@supports (display: flex) {
+  .face {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .box1 {
+    display: flex;
+    order: 2;
+    padding-top: 12px;
+  }
+  
+  .box2 {
+    display: flex;
+  }
+  
+  .container {
+    position: absolute;
+    top: 40%;
+    left: 37%;
+  
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
