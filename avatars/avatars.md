@@ -5,7 +5,8 @@
 - 이미지와 상태 정보는 정해진 크기로 설정한다. <br/>
 - float로 구현한 뒤 flex가 지원되는 환경에서 적용될 레이아웃도 구현한다.
 
- <br/> <br/>
+<br/> 
+<br/>
 
 ## HTML 구조
 - 아바타 이미지를 넣을 ```<img>``` 태그와 상태 정보를 나타낼 ```<div>``` 태그를 face라는 ```<div>``` 태그로 묶었다.  <br/>
@@ -16,10 +17,12 @@
 
 - 웹 접근성 향상을 위해 이미지와 상태 정보 태그에 aria-label 속성을 부여하였다.  <br/>
 
-<br/> <br/>
+<br/>
+<br/>
 
 ## CSS 구현
 ### float로 구현
+![float 과제](https://github.com/kwonboryong/homework/blob/main/images/float%20%EA%B3%BC%EC%A0%9C.png?raw=true)
 - 상태 정보를 나타내는 online과 offline 클래스는 border-radius를 사용하여 원 모양으로 만들었고, position: absolute 속성과 top, left 속성을 이용하여 이미지 위에 배치하였다.
 
 - 이미지와 상태 정보를 묶는 박스인 face에는 float를 사용하여 이미지들이 가로 정렬되도록 하였고, margin-left 속성을 이용하여 이미지 간의 간격이 20px이 되도록 구현하였다. 
@@ -36,14 +39,16 @@
 container에 margin을 줘서 가운데 정렬하려고 했는데 이 방법은 비효율적인 것 같아서 다른 방법을 생각해보았다.  <br/>
 container에 position: absolute를 적용하여 부모 요소인 html 태그를 기준으로 top과 left를 적용하여 가운데 정렬시켰다.
 
- 
   - **2. 이미지 박스 간 간격**  <br/>
 box2에 margin-top을 주어 box1과 box2 간의 간격을 설정하려고 했다.  <br/>
 그러나 margin도 padding도 적용되지 않았고 float 영향 때문인가 싶어 .box2에 clear: both를 적용한 뒤 padding-top을 적용하니 원하는 간격으로 조정되었다.
 
- <br/> <br/>
+<br/> 
+<br/> 
+<br/>
 
 ### flex로 구현
+![flex 과제](https://github.com/kwonboryong/homework/blob/main/images/flex%20%EA%B3%BC%EC%A0%9C.png?raw=true)
 - flex 기능이 적용되는 환경에서의 레이아웃을 위해 기존의 float로 구현한 코드에서 @supports를 사용하여 flex 코드를 추가하고 float가 적용된 코드들을 변경하였다.
 
 - 이미지와 상태 정보를 묶는 박스인 face에는 이미지 간격을 위한 margin-left 속성과 자식 요소인 상태 정보 클래스 online과 offline에 position: absolute 속성을 부여하기 위한 position: relative 속성만 적용하였다.
@@ -54,7 +59,7 @@ box2에 margin-top을 주어 box1과 box2 간의 간격을 설정하려고 했�
 
 - 전체 태그를 감싼 container 클래스에는 자식 요소인 box1과 box2의 순서 변경을 위해 display: flex를 부여하였다.  <br/> 그리고 flex-flow: column nowrap을 설정하여 가로로 정렬된 이미지 박스들을 2줄로 배치하였다. position: absolute 속성과 top, left 속성을 이용하여 화면 가운데로 이동하도록 하였다.
 
- <br/>
+<br/>
 
 - #### 문제 & 해결
   - **1. 순서 변경** <br/>
@@ -71,8 +76,7 @@ flex 과제에서 원래 float 과제에서 짜놓은 html 구조를 CSS 기능�
 혹시나 aria-label의 순서를 변경할 수 있는 방법이 있나 찾아보았지만 찾을 수 없었다. 그렇다고 aria-label 속성에 인덱싱을 제거하자니 너무 단조로워 프로필 이미지들이 구분되지 않을 것 같았다.<br/>
 결국 aria-label의 순서 문제는 해결하지 못했다.
 
-
- <br/> <br/>
+ <br/> <br/><br/>
 
 ## 배운점
 - **float가 적용되는 방식에 대해 자세히 알게 되었다.** <br/>
