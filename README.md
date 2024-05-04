@@ -3,5 +3,5 @@
 
 ---
 
-- ## [avatars](avatars/avatars.md, "0503 과제 avatars")
+- ## [avatars](avatars/avatars.md "0503 과제 avatars")
   
