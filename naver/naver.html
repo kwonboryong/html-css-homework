@@ -14,15 +14,20 @@
           <legend class="sr-only">네이버 로그인 폼</legend>
 
           <div class="login-naver-logo" role="group">
-            <a href="https://www.naver.com/" aria-label="네이버 메인 페이지로 이동" >
+            <a
+              href="https://www.naver.com/"
+              aria-label="네이버 메인 페이지로 이동"
+            >
               <img
                 src="/naver-logo.svg"
                 class="logo-svg"
-                alt="네이버 로고 svg 형식" />
+                alt="네이버 로고 svg 형식"
+              />
               <img
                 src="/naver-logo.png"
                 class="logo-png"
-                alt="네이버 로고 png 형식" />
+                alt="네이버 로고 png 형식"
+              />
             </a>
           </div>
 
@@ -59,16 +64,22 @@
 
       <ul class="login-state-group">
         <li class="login-state">
-          <input type="checkbox" id="stayLogin" name="stayLogin" tabindex="1" />
+          <input type="checkbox" id="stayLogin" name="stayLogin" tabindex="2" />
           <label for="stayLogin"></label>
-          <span>로그인 상태유지</span>
+          <span aria-labelledby="stayLogin">로그인 상태유지</span>
         </li>
         <li class="ip-security">
-          <a href="ip_security.html" target="_blank" tabindex="2" >IP 보안</a>
+          <a
+            href="ip_security.html"
+            target="_blank"
+            tabindex="3"
+            aria-label="IP 보안 설명 페이지"
+            >IP 보안</a
+          >
           <input
             type="checkbox"
             id="ipSwitch"
-            class="toggle-switch"
+            class="toggle-switch sr-only"
             name="ipSwitch"
             tabindex="3"
           />

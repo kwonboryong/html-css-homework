@@ -55,12 +55,6 @@
   display: none; 
 }
 
-
-/* SVG를 지원하는 브라우저 */
-.logo-svg {
-  display: block; 
-}
-
 /* SVG를 지원하지 않는 브라우저(png 사용) */
 @supports not (image-set: url('invalid-url')) {
   .logo-svg {
@@ -198,18 +192,13 @@
 
 
   /* 체크박스 */
-  .toggle-switch {
-    display: none;
-  }
-
-  /* 체크박스 기본 스타일 */
   .toggle-label {
     display: inline-block;
     width: 1.8rem;
     height: 1.25rem;
     padding-left: 4px;
-    user-select: none;
     color: white;
+    user-select: none;
     text-align: center;
     cursor: pointer;
   }
@@ -225,4 +214,5 @@
     color: var(--switch-toggleOff);
     margin-left: -1.7rem;
   }
+  
 }
