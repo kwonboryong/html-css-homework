@@ -1,0 +1,87 @@
+:root {
+  --base: "SUIT Variable" sans-serif;
+}
+
+* *::before *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--base);
+}
+
+.avatars {
+  --size: 64px;
+
+  margin: 0;
+  position: relative;
+  border: 1px solid red;
+  inline-size: var(--size);
+  block-size: var(--size);
+
+  img {
+    inline-size: inherit;
+    block-size: inherit;
+    border-radius: 50%;
+  }
+
+  figcaption {
+    --size: 18px;
+
+    inline-size: var(--size, 18px);
+    block-size: var(--size, 18px);
+    background-color: #aaa;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+
+  &.online {
+    figcaption {
+      background-color: rgb(55, 198, 26);
+    }
+  }
+}
+
+.member {
+  --avata-size: 64px;
+  --avata-count: 4;
+  --avata-spacing: 10px;
+  --container-size: 
+
+  border: 1px solid red;
+  inline-size: calc(64 * 4 + 80 + 2);
+  margin: 50px auto;
+
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 0;
+    display: flow-root;
+  }
+
+  li {
+    margin: 10px;
+    float: left;
+  }
+}
+
+@supports (display: flex) {
+  .member {
+    
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    li {
+      float: none;
+    }
+
+    li:nth-child(-n+4) {
+      order: 1;
+    }
+  }
+}

@@ -1,0 +1,230 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+:root {
+  /* 기본 글자 크기, 색상 */
+  --font-size: 16px;
+  --font-color: #181818;
+
+  /* 로고 가로 */
+  --logo-width: 230px;
+
+  /* 포커스 스타일 커스텀 */
+  --focus-color: #24388d;
+
+  /* 입력 서식 */
+  --input-fontSize: 14px;
+  --input-height: 45px;
+  --input-border: #dadada;
+  --input-bgColor: #fff;
+  --input-paddingTop: 20px;
+
+  --input-focus-border: #03cf5d;
+  --input-focus-bgColor: #e9f0fd;
+
+  /* 로그인 버튼 */
+  --btn-fontSize: 16px;
+  --btn-height: 45px;
+  --btn-fontColor: #fff;
+  --btn-bgColor: #03cf5d;
+  --btn-paddingTop: 20px;
+
+  /* IP 보안 스위치 */
+  --switch-fontSize: 16px;
+  --switch-fontColor: #181818;
+  --switch-toggleOn: #979797;
+  --switch-toggleOff: #08992a;
+}
+
+* {
+  font-size: var(--font-size);
+  color: var(--font-color);
+  border: none;
+
+  &:focus {
+    color: var(--focus-color);
+  }
+}
+
+
+/* SVG를 지원하는 브라우저 */
+.logo-svg {
+  display: block; 
+}
+
+/* SVG를 지원하지 않는 브라우저 */
+.logo-png {
+  display: none; 
+}
+
+/* SVG를 지원하지 않는 브라우저 */
+@supports not (image-set: url('invalid-url')) {
+  .logo-svg {
+    display: none;
+  }
+
+  /* SVG를 지원하는 경우 */
+  .logo-png {
+    display: block;
+  }
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.ip-security {
+  display: none;
+}
+
+.login-input-group {
+  margin: 0 1.25rem;
+}
+
+
+/* 폼 전체 */
+.login {
+  margin-top: 7rem;
+}
+
+
+/* 로고 */
+.login-naver-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+
+/* 아이디/비밀번호 입력칸 */
+.form-input {
+  border: 1px solid black;
+  width: 100%;
+  font-size: var(--input-fontSize);
+  height: var(--input-height);
+  border-color: var(--input-border);
+  background-color: var(--input-bgColor);
+  padding: 1.25rem;
+  margin-top: 0.625rem;
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    background-color: var(--input-focus-bgColor);
+  }
+}
+
+
+/* 로그인 버튼 */
+.login-btn {
+  width: calc(100% - 2.5rem);
+  font-size: var(--btn-fontSize);
+  height: var(--btn-height);
+  color: var(--btn-fontColor);
+  background-color: var(--btn-bgColor);
+  margin: 1.25rem 0 0 1.25rem;
+}
+
+
+/* 로그인 상태 유지 & IP 보안 */
+.login-state-group {
+  margin-top: 0.625rem;
+}
+
+
+/* 로그인 상태 유지 */
+.login-state {
+  float: right;
+  position: relative;
+  margin-right: 1.25rem;
+
+  input {
+    position: absolute;
+    appearance: none;
+    width: 1.875rem;
+    height: 1.5rem;
+    margin-left: 1.25rem;
+    cursor: pointer;
+  }
+
+  label {
+    background: url(/icons/unchecked.svg) no-repeat center/contain;
+    padding-left: 1.875rem;
+    margin-left: 1.25rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  input:checked+label {
+    background-image: url(/icons/checked.svg);
+  }
+}
+
+
+/* 데스크탑 반응형 */
+@media (min-width: 768px) {
+
+  /* 전체 폼 */
+  .login {
+    width: 500px;
+    margin: 7rem auto;
+  }
+
+  /* IP 보안 */
+  .ip-security {
+    display: block;
+    float: right;
+    margin-right: 1.25rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  /* 로그인 상태 유지 */
+  .login-state {
+    float: left;
+    margin-left: -4px;
+  }
+
+
+  /* 체크박스 */
+  .toggle-switch {
+    display: none;
+  }
+
+  /* 체크박스 기본 스타일 */
+  .toggle-label {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.25rem;
+    padding-left: 4px;
+    user-select: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* 체크박스 체크 O */
+  .toggle-switch:not(:checked)+.toggle-label {
+    color: var(--switch-toggleOn);
+  }
+
+  /* 체크박스가 체크 X */
+  .toggle-switch:checked+.toggle-label::after {
+    content: "ON";
+    color: var(--switch-toggleOff);
+    margin-left: -1.7rem;
+  }
+
+}

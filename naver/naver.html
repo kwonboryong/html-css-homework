@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 로그인 폼</title>
+    <link rel="stylesheet" href="naver.css" />
+  </head>
+  <body>
+    <section class="login" aria-label="로그인 폼">
+      <h2 class="sr-only">네이버 로그인 폼</h2>
+      <form action="/">
+        <fieldset>
+          <legend class="sr-only">네이버 로그인 폼</legend>
+
+          <div class="login-naver-logo" role="group">
+            <a href="https://www.naver.com/" aria-label="네이버 메인 페이지로 이동" >
+              <!-- SVG 로고 -->
+              <img
+                src="/naver-logo.svg"
+                class="logo-svg"
+                alt="네이버 로고 svg 형식" tabindex="7" />
+              <!-- png 로고 -->
+              <img
+                src="/naver-logo.png"
+                class="logo-png"
+                alt="네이버 로고 png 형식" tabindex="7" />
+            </a>
+          </div>
+
+          <div role="group" class="login-input-group">
+            <div role="group">
+              <label for="inputId" class="sr-only">아이디 입력칸</label>
+              <input
+                class="form-input"
+                type="text"
+                id="inputId"
+                required
+                placeholder="아이디(이메일)"
+                name="userId"
+                tabindex="1"
+              />
+            </div>
+            <div role="group">
+              <label for="inputPw" class="sr-only">비밀번호 입력칸</label>
+              <input
+                class="form-input"
+                type="text"
+                id="inputPw"
+                required
+                placeholder="비밀번호"
+                name="userPw"
+                tabindex="2"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="login-btn" tabindex="6">로그인</button>
+        </fieldset>
+      </form>
+
+      <ul class="login-state-group">
+        <li class="login-state">
+          <input type="checkbox" id="stayLogin" name="stayLogin" tabindex="3" />
+          <label for="stayLogin"></label>
+          <span>로그인 상태유지</span>
+        </li>
+        <li class="ip-security">
+          <a href="ip_security.html" target="_blank" tabindex="4">IP 보안</a>
+          <input
+            type="checkbox"
+            id="ipSwitch"
+            class="toggle-switch"
+            name="ipSecurity"
+            tabindex="5"
+          />
+          <label for="ipSwitch" class="toggle-label">OFF</label>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

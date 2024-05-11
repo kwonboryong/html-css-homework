@@ -4,8 +4,7 @@ img {
   border-radius: 50%;
 }
 
-.offline {
-  background-color: #DBDBDB;
+.offline, .online {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -15,15 +14,12 @@ img {
   left: 45px;
 }
 
+.offline {
+    background-color: #DBDBDB;
+}
+
 .online {
   background-color: #4CFE88;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid white;
-  position: absolute;
-  top: 45px;
-  left: 45px;
 }
 
 .face {
@@ -43,7 +39,7 @@ img {
   left: 37%;
 }
 
-
+/* flex를 지원하는 환경 */
 @supports (display: flex) {
   .face {
     position: relative;
@@ -52,7 +48,7 @@ img {
   
   .box1 {
     display: flex;
-    order: 2;
+    order: 1;
     padding-top: 12px;
   }
   
