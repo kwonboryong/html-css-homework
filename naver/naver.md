@@ -20,7 +20,7 @@
 <br/>
 
 ## CSS 구현
-![float 과제](https://github.com/kwonboryong/homework/blob/main/images/float%20%EA%B3%BC%EC%A0%9C.png?raw=true)
+![구현](https://github.com/kwonboryong/homework/assets/152785122/dd4d2a24-df1a-406c-b067-cffdd81742a1)
 - ```:root``` 안에 구현에 사용된 글자 크기와 색상, 가로 크기 등을 변수로 선언하였다.
 
 - 정해진 기본 스타일을 전체적으로 적용하기 위해 전체 선택자를 이용하여 기본 글자 크기와 글자 색상, 포커스 스타일을 지정하였다.
