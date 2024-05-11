@@ -46,13 +46,15 @@
 }
 
 /* 공통 코드 */
-.login-btn, .login-state > input {
+.login-btn,
+.login-state>input {
   cursor: pointer;
 }
 
 /* 로고 png 형식, IP 보안 */
-.logo-png, .ip-security {
-  display: none; 
+.logo-png,
+.ip-security {
+  display: none;
 }
 
 /* SVG를 지원하지 않는 브라우저(png 사용) */
@@ -140,7 +142,7 @@
   float: right;
   position: relative;
   margin-right: 1.25rem;
-  
+
   input {
     position: absolute;
     appearance: none;
@@ -158,7 +160,7 @@
     height: 1.5rem;
   }
 
-  input:checked + label {
+  input:checked+label {
     background-image: url(/icons/checked.svg);
   }
 }
@@ -191,7 +193,7 @@
   }
 
 
-  /* 체크박스 */
+  /* IP 보안 체크박스 */
   .toggle-label {
     display: inline-block;
     width: 1.8rem;
@@ -214,5 +216,4 @@
     color: var(--switch-toggleOff);
     margin-left: -1.7rem;
   }
-  
 }
