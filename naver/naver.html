@@ -15,16 +15,14 @@
 
           <div class="login-naver-logo" role="group">
             <a href="https://www.naver.com/" aria-label="네이버 메인 페이지로 이동" >
-              <!-- SVG 로고 -->
               <img
                 src="/naver-logo.svg"
                 class="logo-svg"
-                alt="네이버 로고 svg 형식" tabindex="7" />
-              <!-- png 로고 -->
+                alt="네이버 로고 svg 형식" />
               <img
                 src="/naver-logo.png"
                 class="logo-png"
-                alt="네이버 로고 png 형식" tabindex="7" />
+                alt="네이버 로고 png 형식" />
             </a>
           </div>
 
@@ -38,7 +36,7 @@
                 required
                 placeholder="아이디(이메일)"
                 name="userId"
-                tabindex="1"
+                tabindex="0"
               />
             </div>
             <div role="group">
@@ -50,29 +48,29 @@
                 required
                 placeholder="비밀번호"
                 name="userPw"
-                tabindex="2"
+                tabindex="0"
               />
             </div>
           </div>
 
-          <button type="submit" class="login-btn" tabindex="6">로그인</button>
+          <button type="submit" class="login-btn" tabindex="4">로그인</button>
         </fieldset>
       </form>
 
       <ul class="login-state-group">
         <li class="login-state">
-          <input type="checkbox" id="stayLogin" name="stayLogin" tabindex="3" />
+          <input type="checkbox" id="stayLogin" name="stayLogin" tabindex="1" />
           <label for="stayLogin"></label>
           <span>로그인 상태유지</span>
         </li>
         <li class="ip-security">
-          <a href="ip_security.html" target="_blank" tabindex="4">IP 보안</a>
+          <a href="ip_security.html" target="_blank" tabindex="2" >IP 보안</a>
           <input
             type="checkbox"
             id="ipSwitch"
             class="toggle-switch"
-            name="ipSecurity"
-            tabindex="5"
+            name="ipSwitch"
+            tabindex="3"
           />
           <label for="ipSwitch" class="toggle-label">OFF</label>
         </li>

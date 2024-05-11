@@ -45,24 +45,28 @@
   }
 }
 
+/* 공통 코드 */
+.login-btn, .login-state > input {
+  cursor: pointer;
+}
+
+/* 로고 png 형식, IP 보안 */
+.logo-png, .ip-security {
+  display: none; 
+}
+
 
 /* SVG를 지원하는 브라우저 */
 .logo-svg {
   display: block; 
 }
 
-/* SVG를 지원하지 않는 브라우저 */
-.logo-png {
-  display: none; 
-}
-
-/* SVG를 지원하지 않는 브라우저 */
+/* SVG를 지원하지 않는 브라우저(png 사용) */
 @supports not (image-set: url('invalid-url')) {
   .logo-svg {
     display: none;
   }
 
-  /* SVG를 지원하는 경우 */
   .logo-png {
     display: block;
   }
@@ -81,9 +85,6 @@
   clip: rect(0 0 0 0);
 }
 
-.ip-security {
-  display: none;
-}
 
 .login-input-group {
   margin: 0 1.25rem;
@@ -100,7 +101,6 @@
 .login-naver-logo {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 3rem;
 }
 
@@ -146,14 +146,13 @@
   float: right;
   position: relative;
   margin-right: 1.25rem;
-
+  
   input {
     position: absolute;
     appearance: none;
     width: 1.875rem;
     height: 1.5rem;
     margin-left: 1.25rem;
-    cursor: pointer;
   }
 
   label {
@@ -165,7 +164,7 @@
     height: 1.5rem;
   }
 
-  input:checked+label {
+  input:checked + label {
     background-image: url(/icons/checked.svg);
   }
 }
@@ -220,11 +219,10 @@
     color: var(--switch-toggleOn);
   }
 
-  /* 체크박스가 체크 X */
+  /* 체크박스 체크 X */
   .toggle-switch:checked+.toggle-label::after {
     content: "ON";
     color: var(--switch-toggleOff);
     margin-left: -1.7rem;
   }
-
 }
